@@ -1,0 +1,200 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-bottom: solid 1px $primary-grey-color;
+
+    &__top {
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    &__image {
+        width: 70px;
+        aspect-ratio: 1 / 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    height: 100%;
+    color: $grayscale-secondary-white;
+    margin-left: 15px;
+    width: 100%;
+
+    &__top {
+        &__title {
+            font-size: map-get($font-sizes, 'size-16');
+            color: $primary-yellow-color;
+            margin-bottom: 5px;
+            line-height: 24px;
+        }
+
+        &__item {
+            display: flex;
+
+            &__text {
+                padding-left: 8px;
+                font-size: map-get($font-sizes, 'size-14');
+                font-weight: map-get($font-weights, regular);
+                color: $grayscale-secondary-white;
+            }
+
+            &__label {
+                font-weight: map-get($font-weights, semi-bold);
+                font-size: map-get($font-sizes, 'size-14');
+                color: $grayscale-secondary-white;
+            }
+
+            &__currency {
+                font-size: map-get($font-sizes, 'size-14');
+                font-weight: map-get($font-weights, regular);
+                color: $grayscale-secondary-white;
+            }
+        }
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    margin: 0 10px;
+
+    &__icon {
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        color: $grayscale-secondary-white;
+    }
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin-top: 10px;
+
+    &__mobile {
+        display: flex;
+    }
+
+    &__desktop {
+        display: none;
+    }
+
+    &__title {
+        margin-top: 5px;
+        font-size: map-get($font-sizes, 'size-14');
+        font-weight: map-get($font-weights, 'bold');
+        color: $primary-yellow-color;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 10px;
+        font-size: map-get($font-sizes, 'size-14');
+        color: $grayscale-secondary-white;
+        list-style: none;
+
+        &__item {
+            &:after {
+                content: ',';
+            }
+
+            &:last-of-type {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+.quantityData {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &__button {
+        width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: $grayscale-primary-light-grey;
+        font-size: map-get($font-sizes, 'size-16');
+        font-weight: map-get($font-weights, 'medium');
+        cursor: pointer;
+    }
+
+    &__counter {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: map-get($font-sizes, 'size-16');
+        font-weight: map-get($font-weights, 'bold');
+        color: $grayscale-secondary-white;
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        &__image {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    .content {
+        padding-left: 20px;
+
+        &__title {
+            font-size: map-get($font-sizes, 'size-24');
+        }
+    }
+
+    .ingredients {
+        &__mobile {
+            display: none;
+        }
+
+        &__desktop {
+            display: flex;
+        }
+
+        &__list {
+            font-size: map-get($font-sizes, 'size-14');
+            color: $grayscale-secondary-white;
+            list-style: none;
+        }
+    }
+
+    .icon {
+        width: 50px;
+        margin: 0 20px;
+
+        &__icon {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}

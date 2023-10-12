@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    width: 100%;
+    padding: 100px 0;
+    min-height: calc(100vh - 90px - 350px);
+    background: url(./../../assets/menu-background2.jpg);
+    background-attachment: fixed;
+    border-top: 1px solid $primary-grey-color;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        &__icon {
+            width: 80px;
+            height: 80px;
+            color: $primary-yellow-color;
+        }
+
+        &__title {
+            color: $primary-yellow-color;
+            font-size: map-get($font-sizes, 'size-32');
+            font-weight: map-get($font-weights, bold);
+            line-height: 70px;
+            text-align: center;
+        }
+
+        &__description {
+            color: $grayscale-secondary-white;
+            font-size: map-get($font-sizes, 'size-16');
+            text-align: center;
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+            margin: 20px auto 0;
+            padding: 10px 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: $primary-yellow-color;
+            color: $primary-grey-color;
+            font-size: map-get($font-sizes, 'size-16');
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

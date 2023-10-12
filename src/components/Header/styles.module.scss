@@ -1,0 +1,157 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    max-width: 100vw;
+    background-color: $primary-grey-color;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navIcon {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s linear;
+    position: absolute;
+    padding: 10px;
+
+    &_active {
+        margin-left: 0;
+        transform: translateX(210px);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__Inner {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: whitesmoke;
+        transition: all 0.3s linear;
+        border-radius: 10px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: whitesmoke;
+            transition: all 0.3s linear;
+            border-radius: 10px;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            bottom: -10px;
+        }
+
+        &_active {
+            visibility: hidden;
+
+            &::before,
+            &::after {
+                visibility: visible;
+            }
+
+            &::before {
+                transform: translateY(10px) rotate(-45deg);
+            }
+
+            &::after {
+                transform: translateY(-10px) rotate(45deg);
+            }
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__icon {
+        height: 40px;
+        width: 40px;
+        color: #fab445;
+    }
+}
+
+.cartIcon {
+    margin: 0 20px 0 auto;
+
+    &__content {
+        position: relative;
+        padding: 10px;
+        cursor: pointer;
+
+        &__icon {
+            height: 30px;
+            width: 30px;
+            color: #fab445;
+        }
+
+        &__counter {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background-color: $primary-red-color;
+            bottom: 12px;
+            right: 2px;
+            color: $grayscale-white;
+            font-size: map-get($font-sizes, 'size-14');
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .navIcon {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 20px;
+        transform: translateX(0);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__icon {
+            height: 50px;
+            width: 50px;
+            color: #fab445;
+        }
+    }
+
+    .cartIcon {
+        margin: 0 40px 0 auto;
+    }
+}

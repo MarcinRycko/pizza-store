@@ -1,0 +1,16 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    padding: 40px 20px;
+
+    &__title {
+        color: $primary-yellow-color;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        padding: 40px;
+    }
+}

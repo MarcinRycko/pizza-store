@@ -1,0 +1,43 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    min-height: calc(100vh - (90px + 350px));
+    background: url(./../../../assets/menu-background2.jpg);
+    background-attachment: fixed;
+    position: relative;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.contentWrapper {
+    flex-basis: 100%;
+}
+
+.summaryWrapper {
+    flex-basis: 100%;
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        &__container {
+            flex-direction: row;
+        }
+    }
+
+    .contentWrapper {
+        flex-basis: 70%;
+        flex-grow: 0;
+    }
+
+    .summaryWrapper {
+        flex-basis: 30%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}

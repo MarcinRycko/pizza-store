@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 30px;
+
+    &__container {
+        width: 300px;
+        height: 300px;
+    }
+
+    &__iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .map {
+        width: 33%;
+        height: 100%;
+    }
+}

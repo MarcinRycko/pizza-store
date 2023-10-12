@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 30px;
+
+    &__item {
+        font-size: map-get($font-sizes, 'size-18');
+        font-weight: map-get($font-weights, regular);
+        padding: 0.5rem 1rem;
+        border: 1px solid $primary-yellow-color;
+        color: $primary-yellow-color;
+
+        cursor: pointer;
+
+        &_active {
+            color: $primary-grey-color;
+            background-color: $primary-yellow-color;
+        }
+    }
+}

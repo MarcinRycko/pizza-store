@@ -1,0 +1,86 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px 30px;
+
+    &__quantity {
+        display: flex;
+
+        &__btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: $grayscale-primary-light-grey;
+            font-size: map-get($font-sizes, 'size-16');
+            font-weight: map-get($font-weights, 'medium');
+            cursor: pointer;
+        }
+
+        &__counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            font-size: map-get($font-sizes, 'size-16');
+            font-weight: map-get($font-weights, 'bold');
+        }
+    }
+
+    &__addBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        height: 40px;
+        width: 300px;
+        border: none;
+        border-radius: 10px;
+        background-color: $primary-yellow-color;
+        color: $primary-grey-color;
+        font-size: map-get($font-sizes, 'size-16');
+        cursor: pointer;
+
+        & > span {
+            font-size: map-get($font-sizes, 'size-14');
+        }
+
+        & > span:last-of-type {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        padding: 0 30px 30px;
+
+        &__quantity {
+            &__btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            &__counter {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__addBtn {
+            height: 50px;
+
+            & > span {
+                font-size: map-get($font-sizes, 'size-16');
+            }
+
+            & > span:last-of-type {
+                display: block;
+            }
+        }
+    }
+}

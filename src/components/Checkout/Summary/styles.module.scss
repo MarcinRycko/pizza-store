@@ -1,0 +1,114 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    padding: 0px 20px 40px;
+    width: 100%;
+    height: 100%;
+
+    &__container {
+        position: sticky;
+        top: calc(90px + 40px);
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.07);
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            line-height: 1.4;
+            color: $grayscale-secondary-white;
+            font-weight: map-get($font-weights, semi-bold);
+            font-size: map-get($font-sizes, 'size-24');
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+    }
+}
+.summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+
+    &:first-of-type {
+        padding-top: 10px;
+    }
+
+    &:nth-of-type(2n) {
+        padding-bottom: 10px;
+    }
+
+    &:last-of-type {
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__title {
+        color: $grayscale-secondary-white;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: map-get($font-sizes, 'size-14');
+        padding-right: 5px;
+    }
+
+    &__price {
+        color: $grayscale-secondary-white;
+        font-weight: map-get($font-weights, regular);
+        font-size: map-get($font-sizes, 'size-14');
+    }
+
+    &__total {
+        color: $grayscale-secondary-white;
+        font-weight: map-get($font-weights, semi-bold);
+        font-size: map-get($font-sizes, 'size-18');
+        padding-right: 5px;
+
+        &__price {
+            color: $grayscale-secondary-white;
+            font-weight: map-get($font-weights, regular);
+            font-size: map-get($font-sizes, 'size-18');
+        }
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 10px;
+    background-color: $primary-yellow-color;
+    color: $primary-grey-color;
+    font-size: map-get($font-sizes, 'size-16');
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.progressBar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+
+    &__text {
+        color: $grayscale-secondary-white;
+        font-weight: map-get($font-weights, regular);
+        font-size: map-get($font-sizes, 'size-14');
+        padding-bottom: 10px;
+
+        strong {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        padding: 75px 40px 40px;
+
+        &__container {
+            position: sticky;
+        }
+    }
+}

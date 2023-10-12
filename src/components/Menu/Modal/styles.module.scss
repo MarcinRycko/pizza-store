@@ -1,0 +1,45 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    position: relative;
+
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(1px);
+        overflow-y: scroll;
+        z-index: 3;
+    }
+}
+
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 600px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+    &__button {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        cursor: pointer;
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+            color: $primary-grey-color;
+        }
+    }
+}

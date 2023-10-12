@@ -1,0 +1,54 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    column-gap: 20px;
+    padding: 40px 20px 0;
+
+    &__image {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    &__title {
+        color: $primary-grey-color;
+        font-size: map-get($font-sizes, 'size-20');
+        line-height: 20px;
+    }
+
+    &__text {
+        margin-top: 5px;
+        font-size: map-get($font-sizes, 'size-14');
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'tablet')) {
+    .wrapper {
+        &__image {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        column-gap: 30px;
+        padding: 30px 30px 0;
+        &__image {
+            width: 175px;
+            height: 175px;
+        }
+
+        &__title {
+            font-size: map-get($font-sizes, 'size-24');
+            line-height: 30px;
+        }
+
+        &__text {
+            font-size: map-get($font-sizes, 'size-16');
+        }
+    }
+}

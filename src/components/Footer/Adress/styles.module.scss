@@ -1,0 +1,49 @@
+@import './../../../styles/variables.scss';
+
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 30px 0 30px;
+    border-bottom: 1px solid rgba($grayscale-secondary-white, 0.3);
+
+    &__title {
+        color: $grayscale-secondary-white;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__paragraph {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        &__icon {
+            height: 20px;
+            width: 20px;
+            color: $grayscale-secondary-white;
+        }
+
+        &__text {
+            padding: 10px;
+            color: $grayscale-secondary-white;
+            font-size: map-get($font-sizes, 'size-14');
+            text-decoration: none;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .adress {
+        width: 33%;
+        padding: 20px;
+        border: none;
+    }
+}
