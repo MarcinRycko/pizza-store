@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/pizza-store/static/css/main.147741fe.css",
+    "main.js": "/pizza-store/static/js/main.9c96ff02.js",
+    "static/js/787.a2cbe184.chunk.js": "/pizza-store/static/js/787.a2cbe184.chunk.js",
+    "static/media/background-medium.jpg": "/pizza-store/static/media/background-medium.d711e58ad8313ddfed38.jpg",
+    "static/media/pizza-menu-small.jpg": "/pizza-store/static/media/pizza-menu-small.7f1a3d6272df97eeac40.jpg",
+    "static/media/menu-header.jpg": "/pizza-store/static/media/menu-header.dd7d0ca447924ec984dd.jpg",
+    "static/media/burger-menu-small.jpg": "/pizza-store/static/media/burger-menu-small.2864705fc9d76023b021.jpg",
+    "static/media/pasta-menu-small.jpg": "/pizza-store/static/media/pasta-menu-small.8a0a1a18d6a0ffb1a6d6.jpg",
+    "static/media/drinks-menu-small.jpg": "/pizza-store/static/media/drinks-menu-small.25ffee3e3348311f551d.jpg",
+    "static/media/ourRestaurant.jpg": "/pizza-store/static/media/ourRestaurant.168c7c5e9d0aad9c5e5d.jpg",
+    "static/media/ourRestaurantSecond.jpg": "/pizza-store/static/media/ourRestaurantSecond.3bd63f1358419b02999e.jpg",
+    "static/media/menu-background2.jpg": "/pizza-store/static/media/menu-background2.1016007dcbe4031ed5ad.jpg",
+    "index.html": "/pizza-store/index.html",
+    "main.147741fe.css.map": "/pizza-store/static/css/main.147741fe.css.map",
+    "main.9c96ff02.js.map": "/pizza-store/static/js/main.9c96ff02.js.map",
+    "787.a2cbe184.chunk.js.map": "/pizza-store/static/js/787.a2cbe184.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.147741fe.css",
+    "static/js/main.9c96ff02.js"
+  ]
+}
