@@ -1,5 +1,5 @@
 import { GlobalStateContextProvider } from './context/globalStateContext';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { MenuDataContextProvider } from './context/menuDataContext';
 import { GlobalVariablesContextProvider } from './context/globalVariablesContext';
 import Header from './components/Header/Header';
@@ -23,7 +23,7 @@ const App: React.FC = () => {
       <MenuDataContextProvider>
         <GlobalVariablesContextProvider>
           <GlobalStateContextProvider>
-            <BrowserRouter>
+            <HashRouter>
               <ScrollToTop />
               <Header />
               <SidebarCart />
@@ -41,7 +41,7 @@ const App: React.FC = () => {
                 <Route path="/*" element={<NotFoundPage />}></Route>
               </Routes>
               <Footer />
-            </BrowserRouter>
+            </HashRouter>
           </GlobalStateContextProvider>
         </GlobalVariablesContextProvider>
       </MenuDataContextProvider>
