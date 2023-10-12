@@ -1,0 +1,42 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 15px;
+    border-bottom: solid 1px $primary-grey-color;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: $grayscale-secondary-white;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    &__input {
+        appearance: none;
+        display: grid;
+        height: 16px;
+        width: 16px;
+        margin: 0 10px 0 0;
+        background-color: whitesmoke;
+        border: none;
+        border-radius: 50%;
+        color: currentColor;
+        transform: translateY(-0.075em);
+        place-content: center;
+
+        &::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            box-shadow: inset 1em 1em $primary-yellow-color;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+        }
+
+        &:checked::before {
+            transform: scale(1);
+        }
+    }
+}

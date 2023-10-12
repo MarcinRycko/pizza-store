@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    width: 100%;
+    padding: 100px 0;
+    min-height: calc(100vh - 90px - 350px);
+    background: url(./../../assets/menu-background2.jpg);
+    background-attachment: fixed;
+    border-top: 1px solid $primary-grey-color;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        &__title {
+            font-size: map-get($font-sizes, 'size-56');
+            color: $primary-yellow-color;
+        }
+
+        &__subtitle {
+            color: $grayscale-secondary-white;
+            font-size: map-get($font-sizes, 'size-32');
+            font-weight: map-get($font-weights, bold);
+            line-height: 70px;
+        }
+
+        &__description {
+            color: $grayscale-secondary-white;
+            font-size: map-get($font-sizes, 'size-16');
+            text-align: center;
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+            padding: 10px 40px;
+            margin: 20px auto 0;
+            border: none;
+            background-color: $primary-yellow-color;
+            color: $primary-grey-color;
+            font-size: map-get($font-sizes, 'size-16');
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

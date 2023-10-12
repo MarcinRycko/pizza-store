@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    position: relative;
+    height: calc(100vh - 90px);
+    background-image: url('./../../assets/background-medium.jpg');
+    background-position: left bottom;
+    background-size: cover;
+
+    &__backdrop {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__subtitle {
+            font-size: map-get($font-sizes, 'size-56');
+            color: $primary-yellow-color;
+            line-height: 1.8;
+            font-weight: map-get($font-weights, light);
+            padding-bottom: 10px;
+            font-family: 'Nothing You Could Do';
+        }
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 90%;
+
+            span {
+                font-family: $secondary-font-style;
+                text-transform: uppercase;
+                font-size: map-get($font-sizes, 'size-24');
+                color: #fff;
+                line-height: 1.5;
+                font-weight: map-get($font-weights, regular);
+                letter-spacing: 1px;
+            }
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: $primary-yellow-color;
+            color: $primary-grey-color;
+            font-size: map-get($font-sizes, 'size-16');
+            width: auto;
+            padding: 10px 40px;
+            min-height: 50px;
+            margin: 20px auto 0;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        &__backdrop {
+            display: none;
+        }
+
+        &__container {
+            right: 10%;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    padding: 0 20px 40px;
+
+    &__title {
+        color: $primary-yellow-color;
+    }
+
+    &__error {
+        color: $primary-red-color;
+        font-size: map-get($font-sizes, 'size-10');
+        padding: 2px 0;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        padding: 0 40px 40px;
+    }
+}

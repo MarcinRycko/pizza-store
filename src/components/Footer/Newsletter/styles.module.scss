@@ -1,0 +1,76 @@
+@import '../../../styles/variables.scss';
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0 30px;
+    border-bottom: 1px solid rgba($grayscale-secondary-white, 0.3);
+
+    &__title {
+        color: $grayscale-secondary-white;
+    }
+
+    &__description {
+        padding: 10px 0 20px;
+        color: $grayscale-secondary-white;
+    }
+
+    &__successMessage {
+        height: 35px;
+        color: $primary-yellow-color;
+        font-size: map-get($font-sizes, 'size-16');
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 280px;
+
+    &__fieldset {
+        display: flex;
+        height: 35px;
+        border: none;
+    }
+
+    &__input {
+        width: 90%;
+        height: 35px;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 20px 0 0 20px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        height: 35px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+    }
+
+    &__errorMsg {
+        height: 30px;
+        padding-top: 10px;
+        color: $primary-red-color;
+        font-size: map-get($font-sizes, 'size-12');
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .newsletter {
+        width: 33%;
+        padding: 20px;
+        border: none;
+    }
+}

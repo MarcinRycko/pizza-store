@@ -1,0 +1,50 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 10px;
+
+    &__label {
+        height: 24px;
+        color: $grayscale-secondary-white;
+        transform: translateY(25px);
+        transition: 0.3s;
+
+        &_active {
+            color: $primary-yellow-color;
+            font-size: map-get($font-sizes, 'size-12');
+            transform: translateY(5px);
+        }
+
+        &_required {
+            &:after {
+                content: '*';
+                padding-left: 2px;
+            }
+        }
+    }
+
+    &__input {
+        height: 150px;
+        padding: 5px;
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+        color: $grayscale-secondary-white;
+        font-size: map-get($font-sizes, 'size-14');
+        background-color: transparent;
+        resize: none;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $primary-yellow-color;
+        }
+    }
+
+    &__error {
+        padding: 2px 0;
+        color: $primary-red-color;
+        font-size: map-get($font-sizes, 'size-10');
+    }
+}

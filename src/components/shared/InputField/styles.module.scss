@@ -1,0 +1,48 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+
+    &__label {
+        height: 24px;
+        color: $grayscale-secondary-white;
+        transform: translateY(25px);
+        transition: 0.3s;
+
+        &_active {
+            color: $primary-yellow-color;
+            font-size: map-get($font-sizes, 'size-12');
+            transform: translateY(5px);
+        }
+    }
+
+    &__input {
+        padding: 5px;
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+        background-color: transparent;
+        color: $grayscale-secondary-white;
+        font-size: map-get($font-sizes, 'size-14');
+
+        &:focus {
+            border-bottom: 2px solid $primary-yellow-color;
+            outline: none;
+        }
+    }
+
+    &_required {
+        &:after {
+            content: '*';
+            padding-left: 2px;
+        }
+    }
+
+    &__error {
+        padding: 2px 0;
+        color: $primary-red-color;
+        font-size: map-get($font-sizes, 'size-10');
+    }
+}

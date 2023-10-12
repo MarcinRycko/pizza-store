@@ -1,0 +1,40 @@
+@import './../../../styles/variables.scss';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    order: 1;
+
+    &__title {
+        font-size: map-get($font-sizes, 'size-24');
+        color: $grayscale-white;
+        font-weight: map-get($font-weights, regular);
+        line-height: 1.4;
+        padding-bottom: 40px;
+    }
+
+    &__text {
+        font-size: map-get($font-sizes, 'size-14');
+        line-height: 1.8;
+        font-weight: map-get($font-weights, light);
+        color: $primary-yellow-color;
+        padding-bottom: 40px;
+
+        &__prefix {
+            font-size: map-get($font-sizes, 'size-14');
+            line-height: 1.8;
+            font-weight: map-get($font-weights, light);
+            color: $grayscale-white;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+    .wrapper {
+        width: 40%;
+    }
+}
