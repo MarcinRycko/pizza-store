@@ -17,6 +17,13 @@
             font-size: map-get($font-sizes, 'size-12');
             transform: translateY(5px);
         }
+
+        &_required {
+            &:after {
+                content: '*';
+                padding-left: 2px;
+            }
+        }
     }
 
     &__input {
@@ -30,13 +37,6 @@
         &:focus {
             border-bottom: 2px solid $primary-yellow-color;
             outline: none;
-        }
-    }
-
-    &_required {
-        &:after {
-            content: '*';
-            padding-left: 2px;
         }
     }
 

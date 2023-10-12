@@ -24,6 +24,7 @@ const InputField: React.FC<InputFieldProps> = ({
   const [isActive, setIsActive] = useState(false);
   const handleActiveOn = () => setIsActive(true);
   const handleActiveOff = () => setIsActive(false);
+
   return (
     <>
       <div
