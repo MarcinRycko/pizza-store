@@ -15,7 +15,7 @@ export const reducer = (state: GlobalStateType, action: ACTIONTYPE) => {
     case 'INCREASE_CART_ITEM_QUANTITY':
       const increaseCart = state.cart.map((el) => {
         if (el.cartItemId === action.payload.cartItemId) {
-          return { ...el, quantity: el.quantity++ };
+          return { ...el, quantity: el.quantity + 1 };
         }
         return el;
       });
@@ -27,7 +27,7 @@ export const reducer = (state: GlobalStateType, action: ACTIONTYPE) => {
     case 'DECREASE_CART_ITEM_QUANTITY':
       const decreaseCart = state.cart.map((el) => {
         if (el.cartItemId === action.payload.cartItemId) {
-          if (el.quantity > 1) return { ...el, quantity: el.quantity-- };
+          if (el.quantity > 1) return { ...el, quantity: el.quantity - 1 };
           return el;
         }
         return el;
