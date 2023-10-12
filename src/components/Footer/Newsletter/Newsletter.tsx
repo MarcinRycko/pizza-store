@@ -9,7 +9,7 @@ const {
   form,
   form__fieldset,
   form__input,
-  form__btn,
+  form__button,
   form__errorMsg,
 } = styles;
 
@@ -43,7 +43,7 @@ const Newsletter: React.FC = () => {
                 id="email"
                 formNoValidate
               />
-              <button className={form__btn} onClick={handleSubmit}>
+              <button className={form__button} onClick={handleSubmit}>
                 Send
               </button>
             </fieldset>
