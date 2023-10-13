@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { TextareaFieldProps } from './types';
 import { cx } from '../../../utils/cx';
+import { useToggler } from '../../../hooks';
 import styles from './styles.module.scss';
 
 const {
@@ -19,17 +19,11 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
   data: { value, errorMsg },
   handleInputChange,
 }) => {
-  const [isActive, setIsActive] = useState(false);
-  const handleActiveOn = () => setIsActive(true);
-  const handleActiveOff = () => setIsActive(false);
+  const { isActive, setActive, setDisabled } = useToggler();
 
   return (
     <>
-      <div
-        className={wrapper}
-        onFocus={handleActiveOn}
-        onBlur={handleActiveOff}
-      >
+      <div className={wrapper} onFocus={setActive} onBlur={setDisabled}>
         <label
           htmlFor={id}
           className={cx(

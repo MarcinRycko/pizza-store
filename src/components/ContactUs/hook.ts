@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { contactUsInitialState } from './formInitialState';
 import { contactUsValidator } from './utility';
 import { prepareStateToPost } from '../../utils/prepareStateToPost';
